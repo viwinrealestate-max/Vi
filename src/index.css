@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer base {
+  :root,
+  [data-theme="nilgiris-emerald"] {
+    --bg-main: #061510;
+    --bg-surface: #0c2019;
+    --bg-surface-elevated: #112a21;
+    --bg-surface-subtle: #091c15;
+    --border-color: #193f33;
+    --border-subtle: rgba(45, 106, 89, 0.25);
+    --border-accent: rgba(212, 175, 55, 0.4);
+    --accent: #d4af37; /* Champagne Gold */
+    --accent-hover: #e2c050;
+    --accent-glow: rgba(212, 175, 55, 0.25);
+    --accent-subtle: rgba(212, 175, 55, 0.12);
+    --accent-text: #f5d77f;
+    --primary-badge: #10b981; /* Fresh Nilgiris Tea Emerald */
+    --primary-badge-bg: rgba(16, 185, 129, 0.15);
+    --text-primary: #f5f7f6;
+    --text-secondary: #c2d1cb;
+    --text-muted: #839b91;
+    --header-bg: rgba(6, 21, 16, 0.92);
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  }
+
+  [data-theme="heritage-ivory"] {
+    --bg-main: #fbf9f4;
+    --bg-surface: #ffffff;
+    --bg-surface-elevated: #f3efe6;
+    --bg-surface-subtle: #eae4d7;
+    --border-color: #dcd3c2;
+    --border-subtle: rgba(180, 165, 140, 0.35);
+    --border-accent: rgba(168, 116, 36, 0.4);
+    --accent: #b47822; /* Antique British Bronze Gold */
+    --accent-hover: #9c6418;
+    --accent-glow: rgba(180, 120, 34, 0.2);
+    --accent-subtle: rgba(180, 120, 34, 0.1);
+    --accent-text: #8c5610;
+    --primary-badge: #1b5e40; /* Forest Sage */
+    --primary-badge-bg: rgba(27, 94, 64, 0.1);
+    --text-primary: #1c1917;
+    --text-secondary: #44403c;
+    --text-muted: #78716c;
+    --header-bg: rgba(251, 249, 244, 0.95);
+    --card-shadow: 0 10px 30px -10px rgba(80, 60, 40, 0.12);
+  }
+
+  [data-theme="royal-navy"] {
+    --bg-main: #070d19;
+    --bg-surface: #0d172a;
+    --bg-surface-elevated: #13223f;
+    --bg-surface-subtle: #0a1222;
+    --border-color: #1e3358;
+    --border-subtle: rgba(43, 80, 138, 0.25);
+    --border-accent: rgba(56, 189, 248, 0.4);
+    --accent: #38bdf8; /* Sapphire Sky / Platinum */
+    --accent-hover: #7dd3fc;
+    --accent-glow: rgba(56, 189, 248, 0.25);
+    --accent-subtle: rgba(56, 189, 248, 0.12);
+    --accent-text: #bae6fd;
+    --primary-badge: #60a5fa;
+    --primary-badge-bg: rgba(96, 165, 250, 0.15);
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-muted: #7f93ad;
+    --header-bg: rgba(7, 13, 25, 0.94);
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  }
+
+  [data-theme="obsidian-amber"] {
+    --bg-main: #0c0a09;
+    --bg-surface: #1c1917;
+    --bg-surface-elevated: #292524;
+    --bg-surface-subtle: #141210;
+    --border-color: #2e2a27;
+    --border-subtle: rgba(80, 70, 60, 0.3);
+    --border-accent: rgba(245, 158, 11, 0.4);
+    --accent: #f59e0b; /* Warm Honey Amber */
+    --accent-hover: #fbbf24;
+    --accent-glow: rgba(245, 158, 11, 0.25);
+    --accent-subtle: rgba(245, 158, 11, 0.12);
+    --accent-text: #fcd34d;
+    --primary-badge: #10b981;
+    --primary-badge-bg: rgba(16, 185, 129, 0.15);
+    --text-primary: #f5f5f4;
+    --text-secondary: #d6d3d1;
+    --text-muted: #8a8580;
+    --header-bg: rgba(12, 10, 9, 0.94);
+    --card-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .font-serif {
+    font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+  }
+}
+
+/* Dynamic theme utility classes */
+.theme-bg-main {
+  background-color: var(--bg-main);
+}
+.theme-bg-surface {
+  background-color: var(--bg-surface);
+}
+.theme-bg-elevated {
+  background-color: var(--bg-surface-elevated);
+}
+.theme-bg-subtle {
+  background-color: var(--bg-surface-subtle);
+}
+.theme-border {
+  border-color: var(--border-color);
+}
+.theme-border-subtle {
+  border-color: var(--border-subtle);
+}
+.theme-border-accent {
+  border-color: var(--border-accent);
+}
+.theme-accent {
+  color: var(--accent);
+}
+.theme-accent-bg {
+  background-color: var(--accent);
+}
+.theme-accent-subtle-bg {
+  background-color: var(--accent-subtle);
+}
+.theme-text-primary {
+  color: var(--text-primary);
+}
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+.theme-text-muted {
+  color: var(--text-muted);
+}
+.theme-shadow {
+  box-shadow: var(--card-shadow);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}

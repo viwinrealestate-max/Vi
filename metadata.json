@@ -1,0 +1,6 @@
+{
+  "name": "Viwin | Real Estate",
+  "description": "Premium real estate platform featuring Nilgiris & luxury property listings, mortgage calculator, secure encrypted investor alerts, live chat concierge, and market analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
